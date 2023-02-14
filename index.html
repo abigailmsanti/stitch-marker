@@ -9,9 +9,19 @@
 </head>
 <body>
     <div class="flex-container">
-        <div><h1 id="leftArrow"> <= </h1></div>
-        <div><h1 id="monthYear"></h1></div>
-        <div><h1 id="rightArrow"> => </h1></div>
+        <button class="arrow left" id="leftArrow">
+            <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+                45.63,75.8 0.375,38.087 45.63,0.375 "/>
+            </svg>  
+        </button>
+        <div><h1 id="month"></h1> <h1 id="year"></h1></div>        
+        <button class="arrow right" id="rightArrow">
+            <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+                0.375,0.375 45.63,38.087 0.375,75.8 "/>
+            </svg>
+        </button>
     </div>
     <table id="calendar">
         <tr>
@@ -78,7 +88,9 @@
             <td></td>
         </tr>
     </table> 
-
+    <div class="flex-container">
+        <button type="button" id="eventButton">Create Event</button>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
