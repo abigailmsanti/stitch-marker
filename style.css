@@ -11,6 +11,7 @@ table {
     border:1px solid rgb(0, 128, 34) ;
     table-layout: fixed;
     width: 70rem;
+    display: flex;
 }
 
 th{
@@ -36,10 +37,54 @@ h1{
     justify-content: center;
 }
 
-#leftArrow{
-  margin-right: 1em;
+#leftArrow, #rightArrow{
+    -webkit-appearance: none;
+    background: transparent; 
+    border: 0;
+    outline:0;
 }
 
-#rightArrow{
-  margin-left: 1em;
+svg {
+    padding: 5px;
+}
+
+.arrow {
+    cursor: pointer;
+    top: 50%;
+}
+
+.left {
+    left: 42%;
+}
+
+.right {
+    left: 58%;
+}
+
+.left:hover polyline,
+    .left:focus polyline {
+    stroke-width: 3;
+}
+
+.left:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+    .right:focus polyline {
+    stroke-width: 3;
+}
+
+.right:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+polyline {
+    transition: all 250ms ease-in-out;
+}
+
+#eventButton{
+    color:rgb(18, 17, 17);
 }
